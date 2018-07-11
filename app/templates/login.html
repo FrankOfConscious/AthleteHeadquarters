@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Athlete.HQ Login</title>
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style1.css')}}" >
+        <script src="{{url_for('static', filename='js/modernizr.custom.63321.js')}}"></script>
+        <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+		<style>
+			body {
+				background: #e1c192 url({{url_for('static', filename='images/image_blur.jpg')}});
+			}
+		</style>
+    </head>
+    <body class="image bg-blur">
+        <div class="container">
+
+			<header>
+			
+				<h1><strong>Athlete.HQ Coach Manage System</strong></h1>
+				<h2>Efficient to manage your athletes</h2>
+
+				<div class="support-note">
+					<span class="note-ie">Sorry, only modern browsers.</span>
+				</div>
+				
+			</header>
+			
+			<section class="main">
+				<form class="form-2" id="loginForm">
+					<h1><span class="log-in">Log in</span></h1>
+					<p class="float">
+						<label for="login"><i class="icon-user"></i>Username</label>
+						<input type="text" id="email" placeholder="Email">
+					</p>
+					<p class="float">
+						<label for="password"><i class="icon-lock"></i>Password</label>
+						<input type="password" id="password" placeholder="Password" class="showpassword">
+					</p>
+					<p class="clearfix">
+						<button type="button"  id="login" >Log in</button>
+					</p>
+				</form>​​
+			</section>
+			
+        </div>
+		<!-- jQuery if needed -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script>
+            $(function() {
+                $("#login").click(function() {
+                    // form process
+                    var userName = $("#email").val();
+                    var password = $("#password").val();
+                    var isNotError = true;
+                    if(userName==""){
+                        window.alert("Email is invalid");
+                        isNotError = false;
+                        $("#username").focus();
+                        return;
+                    }
+                    if(password==""){
+                        window.alert("Password is invalid");
+                        isNotError = false;
+                        $("#password").focus();
+                        return;
+                    }
+                    $.ajax({
+                        type: "POST",
+						async: false,
+                        url: "https://athletehq.online/session",
+                        dataType: "json",
+                        crossDomain: true,
+                        data: {"email":userName,"password":password},
+                        //data:dataString,
+                        success: function(data){
+                            //successful
+                            processdata(data);
+                        }
+
+                    });
+                    function processdata(data) {
+                        if(data.result=='succeed'){
+
+                            window.sessionStorage.setItem("sessionID",data.sessionID);
+                            window.location.href='https://athletehq.online/coach/main_page';
+                        }
+                        else{
+                            window.alert(data.msg);
+						}
+                    }
+                });
+            });
+            //determine if pressed ENTER
+            $(document).keyup(function(event){
+                if(event.keyCode ==13){
+                    $("#login").trigger("click");
+                }
+            });
+		</script>
+		<script type="text/javascript">
+			$(function(){
+			    $(".showpassword").each(function(index,input) {
+			        var $input = $(input);
+			        $("<p class='opt'/>").append(
+			            $("<input type='checkbox' class='showpasswordcheckbox' id='showPassword' />").click(function() {
+			                var change = $(this).is(":checked") ? "text" : "password";
+			                var rep = $("<input placeholder='Password' type='" + change + "' />")
+			                    .attr("id", $input.attr("id"))
+			                    .attr("name", $input.attr("name"))
+			                    .attr('class', $input.attr('class'))
+			                    .val($input.val())
+			                    .insertBefore($input);
+			                $input.remove();
+			                $input = rep;
+			             })
+			        ).append($("<label for='showPassword'/>").text("Show password")).insertAfter($input.parent());
+			    });
+
+			    $('#showPassword').click(function(){
+					if($("#showPassword").is(":checked")) {
+						$('.icon-lock').addClass('icon-unlock');
+						$('.icon-unlock').removeClass('icon-lock');    
+					} else {
+						$('.icon-unlock').addClass('icon-lock');
+						$('.icon-lock').removeClass('icon-unlock');
+					}
+			    });
+			});
+		</script>
+    </body>
+</html>
