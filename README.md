@@ -90,9 +90,12 @@ This back-end is running on Nectar: </br>see Main page at: https://www.athletehq
 
 <h2>Update the current server in Nectar:</h2>
 
-Contact Dr Edurado Velloso and ask for the following things:
+Contact Dr Eduardo Velloso and ask for the following things:
 1. Private key for authentication to connect with the server. 
 2. Username-password pair of the Ubuntu system.
 3. Username and password to [GoDaddy.com](https://au.godaddy.com/ "GoDaddy") for the domain name purchased.
 4. Username and password to [digitalocean.com](https://www.digitalocean.com/ "DigitalOcean") for the NS service.
+
+<h2>Author<h2>
+Yanbo Liao: yliao3@student.unimelb.edu.au
 
