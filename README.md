@@ -75,6 +75,14 @@ This back-end is running on Nectar: </br>see Main page at: https://www.athletehq
 <h2>How to run it on the cloud server:</h2>
 
 1. Refer to [digitalocean's tutorial](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-16-04) to put it on the cloud.
+	Warning: there is an error at "/etc/nginx/sites-available/myproject" part:
+	```
+	uwsgi_pass unix:/home/sammy/myproject/myproject.sock;
+	```
+	should be:
+	```
+	uwsgi_pass unix:///home/sammy/myproject/myproject.sock;
+	```
 2. The uwsgi and nginx configuration files are in confi directory.
 3. Remember to change the URLs in html files(located in back_end/app/templates) to your own URLs(your server's IP address or domain name).
 
