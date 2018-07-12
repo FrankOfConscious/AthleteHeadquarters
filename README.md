@@ -11,7 +11,11 @@ This back-end is running on Nectar: </br>see Main page at: https://www.athletehq
 
 <h2>How to run it locally:</h2>
 
-1. Install latest MongoDB using default configuration: localhost:127.0.0.1:27017  
+1. Install latest [MongoDB](https://www.mongodb.com/download-center#community "MongoDB Download Center"), use default configuration: 
+	```
+	localhost: 127.0.0.1
+	port number: 27017
+	```
 2. Clone this repositary:
 	```cmd
 	$ git clone https://github.com/FrankOfConscious/AthleteHeadquarters.git
