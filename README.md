@@ -86,7 +86,7 @@ This back-end is running on Nectar: </br>see Main page at: https://www.athletehq
 	```
 	Or, you can directly use the configuration files in this repository.
 2. The uwsgi and nginx configuration files are in confi directory.
-3. Remember to change the URLs in html files(located in [back_end/app/templates](../back_end/app/templates/)) to your own URLs(your server's IP address or domain name).
+3. Remember to change the URLs in html files(located in [back_end/app/templates](/back_end/app/templates/)) to your own URLs(your server's IP address or domain name).
 
 <h2>Update the current server in Nectar:</h2>
 
