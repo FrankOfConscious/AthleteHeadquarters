@@ -96,7 +96,7 @@ Contact Dr Eduardo Velloso and ask for the following things:
 3. Username and password to [GoDaddy.com](https://au.godaddy.com/ "GoDaddy") for the domain name purchased.
 4. Username and password to [digitalocean.com](https://www.digitalocean.com/ "DigitalOcean") for the NS service.
 
-<h2>Author<h2>
+<h2>Autr<h2>
 
 1. Yanbo Liao: yliao3@student.unimelb.edu.au
 
