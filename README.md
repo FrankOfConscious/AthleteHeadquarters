@@ -86,13 +86,13 @@ This back-end is running on Nectar: </br>see Main page at: https://www.athletehq
 	```
 	Or, you can directly use the configuration files in this repository.
 2. The uwsgi and nginx configuration files are in confi directory.
-3. Remember to change the URLs in html files(located in back_end/app/templates) to your own URLs(your server's IP address or domain name).
+3. Remember to change the URLs in html files(located in [back_end/app/templates](../AthleteHeadquarters/back_end/app/templates/)) to your own URLs(your server's IP address or domain name).
 
 <h2>Update the current server in Nectar:</h2>
 
 Contact Dr Edurado Velloso and ask for the following things:
 1. Private key for authentication to connect with the server. 
 2. Username-password pair of the Ubuntu system.
-3. Username and password to GoDaddy.com for the domain purchased.
-4. Username and password to digitalocean.com for the NS service.
+3. Username and password to [GoDaddy.com](https://au.godaddy.com/ "GoDaddy") for the domain name purchased.
+4. Username and password to [digitalocean.com](https://www.digitalocean.com/ "DigitalOcean") for the NS service.
 
