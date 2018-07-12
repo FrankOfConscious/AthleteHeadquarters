@@ -96,6 +96,12 @@ Contact Dr Eduardo Velloso and ask for the following things:
 3. Username and password to [GoDaddy.com](https://au.godaddy.com/ "GoDaddy") for the domain name purchased.
 4. Username and password to [digitalocean.com](https://www.digitalocean.com/ "DigitalOcean") for the NS service.
 
+If you use current server architecture, folowing are the problems you may meet:
+1. After updating file [route.py](back_end/app/route.py), you may need to [rebuild uwsgi with pcre support](https://stackoverflow.com/questions/21669354/rebuild-uwsgi-with-pcre-support), follow the instructions and do them in the virtual environment.
+2. Permission issue: ensure that the user group has the permission to read and write the socket file.
+3. Use [GridFS in mongoDB](http://api.mongodb.com/python/current/api/gridfs/index.html#module-gridfs)
+4. Ajax.
+
 <h2>Author</h2>
 
 Yanbo Liao: yliao3@student.unimelb.edu.au
