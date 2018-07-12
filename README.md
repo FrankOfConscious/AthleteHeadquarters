@@ -17,7 +17,7 @@ This back-end is running on Nectar: </br>see Main page at: https://www.athletehq
   	```
 	then move into back-end directory, create a virtual environment: 
 	```cmd
-	$ virturlenv AHQenv
+	$ virtualenv AHQenv
 	```
 	
 4. Activate the virtual environment: 
@@ -41,6 +41,9 @@ This back-end is running on Nectar: </br>see Main page at: https://www.athletehq
 	(AHQenv)$ pip3 install flask_mongoengine
 	```
 6. Go back to back_end directory, ans set FLASK_APP veriable:
+	```cmd
+	(AHQenv)$ export FLASK_APP=AHQ.py
+	```
 
 	In Windows, use:
 	```cmd
