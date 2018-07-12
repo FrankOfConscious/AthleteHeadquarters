@@ -97,5 +97,6 @@ Contact Dr Eduardo Velloso and ask for the following things:
 4. Username and password to [digitalocean.com](https://www.digitalocean.com/ "DigitalOcean") for the NS service.
 
 <h2>Author<h2>
+
 Yanbo Liao: yliao3@student.unimelb.edu.au
 
