@@ -4,6 +4,11 @@ A new training system for elite athletes, been developing at the University of M
 For whom following this project, this repositary contains the current back-end(python3) and coach management system(WEB).
 This back-end is running on Nectar: </br>see Main page at: https://www.athletehq.online </br> Server's introduction and current apis: https://www.athletehq.online/api
 
+<h2>Prerequisites</h2>
+
+1. Python3: [install python3](https://wiki.python.org/moin/BeginnersGuide/Download "Downloading Python")
+2. Git: [install git](https://git-scm.com/downloads "Git Downloads")
+
 <h2>How to run it locally:</h2>
 
 1. Install latest MongoDB using default configuration: localhost:127.0.0.1:27017  
@@ -65,10 +70,7 @@ This back-end is running on Nectar: </br>see Main page at: https://www.athletehq
 
 <h2>How to run it on the cloud server:</h2>
 
-1. Refer to:
-	```http
-	https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-16-04
-	```
+1. Refer to [digitalocean's tutorial](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-16-04) to put it on the cloud.
 2. The uwsgi and nginx configuration files are in confi directory.
 3. Remember to change the URLs in html files(located in back_end/app/templates) to your own URLs(your server's IP address or domain name).
 
