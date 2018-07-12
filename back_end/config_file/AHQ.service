@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve AHQ
+After=network.target
+
+[Service]
+User=frank
+Group=www-data
+WorkingDirectory=/home/frank/projectAHQ
+Environment="PATH=/home/frank/projectAHQ/AHQenv/bin"
+ExecStart=/home/frank/projectAHQ/AHQenv/bin/uwsgi --ini AHQ.ini
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,36 @@
+server {
+	server_name 115.146.95.83 athletehq.online www.athletehq.online;
+
+
+	location / {
+		include uwsgi_params;
+		uwsgi_pass unix:///home/frank/projectAHQ/ahq.sock;
+	}
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/athletehq.online/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/athletehq.online/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+}
+server {
+    if ($host = www.athletehq.online) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = athletehq.online) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+	listen 80;
+	server_name 115.146.95.83 athletehq.online www.athletehq.online;
+    return 404; # managed by Certbot
+
+
+
+
+}

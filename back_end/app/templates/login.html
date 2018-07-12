@@ -71,7 +71,7 @@
                     $.ajax({
                         type: "POST",
 						async: false,
-                        url: "https://athletehq.online/session",
+                        url: "http://127.0.0.1:5000/session",
                         dataType: "json",
                         crossDomain: true,
                         data: {"email":userName,"password":password},
@@ -86,7 +86,7 @@
                         if(data.result=='succeed'){
 
                             window.sessionStorage.setItem("sessionID",data.sessionID);
-                            window.location.href='https://athletehq.online/coach/main_page';
+                            window.location.href='http://127.0.0.1:5000/coach/main_page';
                         }
                         else{
                             window.alert(data.msg);
