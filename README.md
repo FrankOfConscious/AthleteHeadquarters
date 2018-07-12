@@ -9,7 +9,7 @@ This back-end is running on Nectar: </br>see Main page at: https://www.athletehq
 1. Install latest MongoDB using default configuration: localhost:127.0.0.1:27017  
 2. Clone this repositary:
 	```cmd
-	$ git clone https://github.com/FrankOf
+	$ git clone https://github.com/FrankOfConscious/AthleteHeadquarters.git
 	```
 3. Install virtualenv: 
 	```cmd
