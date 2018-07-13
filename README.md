@@ -96,11 +96,12 @@ Contact Dr Eduardo Velloso and ask for the following things:
 3. Username and password to [GoDaddy.com](https://au.godaddy.com/ "GoDaddy") for the domain name purchased.
 4. Username and password to [digitalocean.com](https://www.digitalocean.com/ "DigitalOcean") for the NS service.
 
-If you use current server architecture, folowing are the problems you may meet:
+If you use current server architecture, folowing are the issues you may meet:
 1. After updating file [route.py](back_end/app/route.py), you may need to [rebuild uwsgi with pcre support](https://stackoverflow.com/questions/21669354/rebuild-uwsgi-with-pcre-support), follow the instructions and do them in the virtual environment.
 2. Permission issue: ensure that the user group has the permission to read and write the socket file.
-3. Use [GridFS in mongoDB](http://api.mongodb.com/python/current/api/gridfs/index.html#module-gridfs)
-4. Ajax.
+3. Use [GridFS in mongoDB](http://api.mongodb.com/python/current/api/gridfs/index.html#module-gridfs).
+4. Use [pymongo](http://api.mongodb.com/python/current/tutorial.html "pymongo Documentation") to operate MongoDB.
+4. Use [Ajax](http://api.jquery.com/jquery.ajax/ "jQuery API Documentation") to communicate between the server and the coach management system(web).
 
 <h2>Author</h2>
 
